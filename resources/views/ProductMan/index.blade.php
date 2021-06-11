@@ -45,7 +45,7 @@
                                 <td>{{ Str::limit($product->desc, 45) }}</td>
                                 <td>{{ $product->qty_stock }}</td>
                                 <td class="text-center">
-                                    @if($product->qty_stock == 0) 
+                                    @if($product->qty_stock <= 0) 
                                         <span class="badge badge-danger">Out of Stock</span>
                                     @elseif($product->alert_stock >= $product->qty_stock)
                                         <span class="badge badge-danger">Low Stock</span>

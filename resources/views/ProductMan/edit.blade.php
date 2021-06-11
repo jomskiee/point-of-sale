@@ -37,11 +37,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="bmd-label-floating">Categories</label>
-                                                <select name="category" class="form-control" id="category" form="prodForm">
-                                                    @foreach ($categories as $category)
-                                                      <option value="{{ $category->id }}">{{ $category->category }}</option>
-                                                    @endforeach
-                                                </select>
+                                                <input id="name" type="text" placeholder="{{ $product->categories }}"class="form-control @error('categories') is-invalid @enderror" name="categories"  required>
                                             </div>
                                         </div>
                                     </div>
